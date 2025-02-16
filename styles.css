@@ -12,5 +12,8 @@ body{
     color: white;
     overflow: hidden;
     overflow-y: scroll;
-    /* overflow-x: visible; added this line */
 }
+
+/* .App {
+    text-align: center;
+} */
