@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.b1099e7e.css",
-    "main.js": "/static/js/main.1e89ef08.js",
-    "static/media/profil-gerar-photo-v3.png": "/static/media/profil-gerar-photo-v3.070565a6959e2db4a4c2.png",
+    "main.css": "/static/css/main.42b800ec.css",
+    "main.js": "/static/js/main.8b685c05.js",
+    "static/media/profil-gerar-photo-v4.png": "/static/media/profil-gerar-photo-v4.4f63048562bf936d7194.png",
     "static/media/portfolio-6.png": "/static/media/portfolio-6.4a10fac7d271e87859e9.png",
     "static/media/portfolio-2.png": "/static/media/portfolio-2.33d06b368b4e6395030e.png",
     "static/media/portfolio-4.png": "/static/media/portfolio-4.8e8bac5e33dc3f211e2b.png",
+    "static/media/coffee-apple.jpg": "/static/media/coffee-apple.a0c19713a15fff3f3cff.jpg",
     "static/media/portfolio-1.png": "/static/media/portfolio-1.b33adf772d54ab33e953.png",
     "static/media/portfolio-5.png": "/static/media/portfolio-5.bf754db8618dd60ec6f1.png",
     "static/media/portfolio-3.png": "/static/media/portfolio-3.ca4192894d93b08ad3b5.png",
@@ -16,11 +17,11 @@
     "static/media/instagram.png": "/static/media/instagram.0bcd1dcb7d853c327af7.png",
     "static/media/logo-g.PNG": "/static/media/logo-g.34af981941ff37851f68.PNG",
     "index.html": "/index.html",
-    "main.b1099e7e.css.map": "/static/css/main.b1099e7e.css.map",
-    "main.1e89ef08.js.map": "/static/js/main.1e89ef08.js.map"
+    "main.42b800ec.css.map": "/static/css/main.42b800ec.css.map",
+    "main.8b685c05.js.map": "/static/js/main.8b685c05.js.map"
   },
   "entrypoints": [
-    "static/css/main.b1099e7e.css",
-    "static/js/main.1e89ef08.js"
+    "static/css/main.42b800ec.css",
+    "static/js/main.8b685c05.js"
   ]
 }
