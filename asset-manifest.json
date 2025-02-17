@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a0a26e3e.css",
-    "main.js": "/static/js/main.f3b284d3.js",
+    "main.css": "/static/css/main.3865530a.css",
+    "main.js": "/static/js/main.58be23bb.js",
     "static/media/profil-gerar-photo-v4.png": "/static/media/profil-gerar-photo-v4.4f63048562bf936d7194.png",
     "static/media/portfolio-6.png": "/static/media/portfolio-6.4a10fac7d271e87859e9.png",
     "static/media/portfolio-2.png": "/static/media/portfolio-2.33d06b368b4e6395030e.png",
@@ -17,11 +17,11 @@
     "static/media/instagram.png": "/static/media/instagram.0bcd1dcb7d853c327af7.png",
     "static/media/logo-g.PNG": "/static/media/logo-g.34af981941ff37851f68.PNG",
     "index.html": "/index.html",
-    "main.a0a26e3e.css.map": "/static/css/main.a0a26e3e.css.map",
-    "main.f3b284d3.js.map": "/static/js/main.f3b284d3.js.map"
+    "main.3865530a.css.map": "/static/css/main.3865530a.css.map",
+    "main.58be23bb.js.map": "/static/js/main.58be23bb.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0a26e3e.css",
-    "static/js/main.f3b284d3.js"
+    "static/css/main.3865530a.css",
+    "static/js/main.58be23bb.js"
   ]
 }
