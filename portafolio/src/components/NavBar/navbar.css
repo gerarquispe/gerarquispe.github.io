@@ -30,6 +30,59 @@
     border-bottom: 3px solid #00ADB5;
 }
 
+.desktopMenu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.desktopMenu li {
+    position: relative; /* Necesario para el submenú */
+    list-style: none; /* Elimina los stilos de list*/
+}
+
+/* Estilos para el contenedor del submenú */
+.desktopMenu li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(34, 40, 49); /* Mismo color de fondo del navbar */
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    padding: 5px;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+/* Mostrar el submenú al pasar el mouse */
+.desktopMenu li:hover ul {
+    display: flex;
+}
+
+/* Estilos para los elementos del submenú */
+.desktopMenu li ul li {
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Estilos para los enlaces dentro del submenú */
+.desktopMenu li ul li .desktopMenuListItem {
+    color: white;
+    padding: 0px;
+    margin: 0.5rem;
+    display: block; /* hace que el bloque desplace al siguiente*/
+}
+
+/* Cambio de color al hacer hover en los elementos del submenú */
+.desktopMenu li ul li .desktopMenuListItem:hover {
+    color: #00ADB5;
+}
+
 .desktopMenuBtn {
     background: white;
     color: black;
