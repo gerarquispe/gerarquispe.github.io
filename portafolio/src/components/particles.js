@@ -32,7 +32,7 @@ const ParticlesComponent = (props) => {
 
   const options = useMemo(
     () => ({
-      fullScreen: { enable: false, zIndex: -1 },
+      fullScreen: { enable: false},
       background: {
         color: {
           value: "transparent",

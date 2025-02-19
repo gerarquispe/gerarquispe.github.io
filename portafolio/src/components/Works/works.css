@@ -50,6 +50,10 @@
     background: #00ADB5;
 }
 
+.workBtn:focus {
+    background: red;
+}
+
 @media screen and (max-width: 585px) {
     .worksImg {
         height: 48vw;
