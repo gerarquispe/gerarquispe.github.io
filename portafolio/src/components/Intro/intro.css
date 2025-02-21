@@ -25,10 +25,10 @@
 
 .backgroundImg {
     position: relative;
-    top: -15rem; /* Ajusta la posición de la parte superior de la imagen */
-    right: 3vw; /* Ajusta la posición de la imagen */
+    top: -12rem; /* Ajusta la posición de la parte superior de la imagen */
+    right: 10vw; /* Ajusta la posición de la imagen */
     z-index: 3;
-    height: 100vh; /* Ajusta la altura de la imagen */
+    height: 110vh; /* Ajusta la altura de la imagen */
 }
 
 .introContent {
