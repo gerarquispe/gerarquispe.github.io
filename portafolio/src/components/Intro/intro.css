@@ -1,5 +1,5 @@
 #intro {
-    height: calc(100vh - 4rem);
+    height: calc(100vh - 5rem);
     width: 100vw;
     margin: 0rem auto;
     overflow: hidden;
@@ -17,32 +17,35 @@
 }
 
 #particles {
-    z-index: 1;
+    z-index: -1;
     width: 100%;
     height: 100%;
     position: absolute;
 }
 
-.bg {
-    /* position: absolute; */
-    /* top: -1rem;
-    right: 15vw; */
-    z-index: 2;
-    object-fit: cover;
-    height: 95vh;
+.backgroundImg {
+    position: relative;
+    top: -15rem; /* Ajusta la posición de la parte superior de la imagen */
+    right: 3vw; /* Ajusta la posición de la imagen */
+    z-index: 3;
+    height: 100vh; /* Ajusta la altura de la imagen */
 }
 
 .introContent {
-    margin: 0rem 0rem 0rem 15vw;
+    position: relative; /* Mantiene su posición en el flujo */
+
+    margin: 0rem 0rem 0rem 7vw;
     height: 100vh;
-    width: 100vw;
+    width: 70%;
     padding: 4rem;
     font-size: 3rem;
     font-weight: 700;
+
     display: flex;
+    flex-grow: 1; /* Hace que tome el espacio restante */
     flex-direction: column;
     justify-content: center;
-    z-index: 3;
+    z-index: 4;
 }
 
 .hello {
@@ -85,12 +88,23 @@
 }
 
 @media screen and (max-width: 840px) {
-    .bg {
+    #intro {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        height: calc(100vh - 16rem);
+    }
+    .backgroundImg {
         right: -10vw;
+        position: absolute;
+        height: 90vh;
+        object-fit: cover;
+        top: -10rem;
+        z-index: 3;
     }
     .introContent {
         font-size: 5vw;
-        margin: 0rem 0rem 0rem -2rem;
+        margin: 0rem 0rem 0rem 0vw;
+        padding: 0rem 0rem 0rem 1rem;
+        z-index: 4;
     }
     .hello {
         font-size: 4.5vw;
@@ -98,10 +112,22 @@
 }
 
 @media screen and (max-width: 480px) {
-    .bg {
-        right: -35vw;
+    #intro {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        height: calc(100vh - 12rem);
+    }
+    .backgroundImg {
+        position: absolute;
+
+        top: -9rem; /* Ajusta la posición de la parte superior de la imagen */
+        right: -20vw; /* Ajusta la posición de la imagen */
+        z-index: 3;
+        /* object-fit: cover; */
+        height: 95vh; /* Ajusta la altura de la imagen */
     }
     .introContent {
+        position: relative;
         margin: 0rem 0rem 0rem -3rem;
+        padding: 0rem 0rem 0rem 4rem;
     }
 }
