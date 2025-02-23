@@ -85,7 +85,13 @@
 
 .link {
     object-fit: cover;
-    height: 3rem;
-    width: 3rem;
-    margin: 0 0.75rem;
+    /* height: 3rem; */
+    width: 4rem;
+    margin: 0 1.7rem;
+}
+
+@media screen and (max-width: 480px) {
+    .link {
+        margin: 0 0rem;
+    }
 }
