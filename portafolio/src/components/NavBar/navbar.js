@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import './navbar.css';
 import logo from '../../assets/logo-g.PNG';
 import contactImg from '../../assets/contact.png';
+import menu from '../../assets/menu.png';
 
 import { Link as ScrollLink } from 'react-scroll';
-import { Link } from 'react-router-dom';
+import * as Scroll from "react-scroll";
+import { useLocation, useNavigate} from 'react-router-dom';
+import {NavLink as Link } from 'react-router-dom';
 
-import menu from '../../assets/menu.png';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -15,40 +17,98 @@ import SchoolIcon from '@mui/icons-material/School';
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
+
+    const path = useLocation().pathname;
+    const location = path.split("/")[1];
+    const navigate = useNavigate();
+    const scroller = Scroll.scroller;
+    const goToPageAndScroll = async (selector,pPage="") => {
+      if(pPage !== "") {
+        await navigate(pPage);
+      }
+      setTimeout(async () => {
+        await scroller.scrollTo(selector, {
+            activeClass: "active",
+            duration: 500,
+            smooth: true,
+            offset: -75,
+            spy: true,
+            className: "desktopMenuListItem"
+        });
+      }
+      , 101);
+    };
+
+    // bloque 01
+    const navbarHome = () => {
+        return (
+            <ul>
+                <li>
+                    <ScrollLink activeClass='active' to='intro' spy={true} smooth={true} offset={-60} duration={500} className="desktopMenuListItem">Home</ScrollLink>
+                </li>
+                <li>
+                    <ScrollLink activeClass='active' to='skills' spy={true} smooth={true} offset={-40} duration={500} className="desktopMenuListItem">About Me</ScrollLink>
+                </li>
+                <li>
+                    <Link to="/publications" className="desktopMenuListItem">Publications</Link>
+                </li>
+                <li>
+                    <Link to="/experience" className="desktopMenuListItem">Experience</Link>
+                </li>
+                <li>
+                    <span>Servicios ▼</span>
+                    <ul>
+                        <li>
+                            <ScrollLink activeClass='active' to='works' spy={true} smooth={true} offset={-60} duration={500} className="desktopMenuListItem">Portfolio</ScrollLink>
+                        </li>
+                        <li>
+                            <ScrollLink activeClass='active' to='clients' spy={true} smooth={true} offset={-40} duration={500} className="desktopMenuListItem">Clients</ScrollLink>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        );
+    };
+    // bloque 02
+    const navbarNoHome = () => {
+        return (
+            <ul>
+                <li>
+                    <ScrollLink className="desktopMenuListItem" onClick={() => goToPageAndScroll("intro","/")}>Home</ScrollLink>
+                </li>
+                <li>
+                    <ScrollLink className="desktopMenuListItem" onClick={() => goToPageAndScroll("skills","/")}>About Me</ScrollLink>
+                </li>
+                <li>
+                    <Link to="/publications" className="desktopMenuListItem">Publications</Link>
+                </li>
+                <li>
+                    <Link to="/experience" className="desktopMenuListItem">Experience</Link>
+                </li>
+                <li>
+                    <span>Servicios ▼</span>
+                    <ul>
+                        <li>
+                            <ScrollLink className="desktopMenuListItem" onClick={() => goToPageAndScroll("works","/")}>Portfolio</ScrollLink>
+
+                        </li>
+                        <li>
+                            <ScrollLink className="desktopMenuListItem" onClick={() => goToPageAndScroll("clients","/")}>Clients</ScrollLink>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        );
+    };
+
+
     return (
         <nav className="navbar">
 
-            <Link to="/">
-                <img src={logo} alt="Logo" className="logo" />
-            </Link>
+            <img src={logo} alt="Logo" className="logo" onClick={() => navigate('/')} />
 
             <div className="desktopMenu">
-                <ul>
-                    <li>
-                    <ScrollLink activeClass='active' to='intro' spy={true} smooth={true} offset={-60} duration={500} className="desktopMenuListItem">Home</ScrollLink>
-                    </li>
-                    <li>
-                    <ScrollLink activeClass='active' to='skills' spy={true} smooth={true} offset={-40} duration={500} className="desktopMenuListItem">About Me</ScrollLink>
-                    </li>
-                    <li>
-                        <Link to="/publications" className="desktopMenuListItem">Publications</Link>
-                    </li>
-                    <li>
-                        <Link to="/experience" className="desktopMenuListItem">Experience</Link>
-                    </li>
-                    <li>
-                        <span>Servicios ▼</span>
-                        <ul>
-                            <li>
-                            <ScrollLink activeClass='active' to='works' spy={true} smooth={true} offset={-60} duration={500} className="desktopMenuListItem">Portfolio</ScrollLink>
-                            </li>
-                            <li>
-                            <ScrollLink activeClass='active' to='clients' spy={true} smooth={true} offset={-40} duration={500} className="desktopMenuListItem">Clients</ScrollLink>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
+                {location === "" ? navbarHome() : navbarNoHome()}
             </div>
 
             <div >
@@ -70,15 +130,23 @@ const Navbar = () => {
 
             </div>
             
-
-            <button className="desktopMenuBtn" onClick={() => {
-                document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
-                }}
-            >
-                <img src={contactImg} alt="" className="desktopMenuImg"/>Contact me
-            </button>
+            {
+                location === "" ? (
+                    // In Home
+                    <button className="desktopMenuBtn" onClick={() => {
+                        document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
+                        }}
+                    >
+                        <img src={contactImg} alt="Contact Me" className="desktopMenuImg"/>Contact me
+                    </button>
+                ) : (
+                    // Not in Home
+                    <button className="desktopMenuBtn" onClick={() => goToPageAndScroll("contact", "/")}>
+                        <img src={contactImg} alt="Contact Me" className="desktopMenuImg"/>Contact me
+                    </button>
+                )
+            }
             
-
 
             {/* Menu para mobiles */}
             <img src={menu} alt="Menu" className="mobMenu" onClick={()=>setShowMenu(!showMenu)}/>
@@ -89,9 +157,6 @@ const Navbar = () => {
                 <ScrollLink activeClass="active" to="clients" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Clients</ScrollLink>
                 <ScrollLink activeClass="active" to="contact" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Contact</ScrollLink>
             </div>
-
-
-
 
         </nav>
     )

@@ -30,6 +30,10 @@
     border-bottom: 3px solid #00ADB5;
 }
 
+.desktopMenu a {
+    color: white;
+}
+
 .desktopMenu ul {
     display: flex;
     flex-direction: row;

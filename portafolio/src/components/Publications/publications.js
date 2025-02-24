@@ -4,7 +4,7 @@ const Publications = () => {
   return (
     <div>
       <h1>Publications</h1>
-      <p>Contenido de Publications.</p>
+      <p>Content of Publications</p>
     </div>
   );
 };
