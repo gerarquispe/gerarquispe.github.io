@@ -18,7 +18,10 @@ const Navbar = () => {
     return (
         <nav className="navbar">
 
-            <img src={logo} alt="Logo" className="logo" />
+            <Link to="/">
+                <img src={logo} alt="Logo" className="logo" />
+            </Link>
+
             <div className="desktopMenu">
                 <ul>
                     <li>
