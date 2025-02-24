@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import './navbar.css';
 import logo from '../../assets/logo-g.PNG';
 import contactImg from '../../assets/contact.png';
-import { Link } from 'react-scroll';
+
+import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
+
 import menu from '../../assets/menu.png';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -19,25 +22,25 @@ const Navbar = () => {
             <div className="desktopMenu">
                 <ul>
                     <li>
-                    <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-60} duration={500} className="desktopMenuListItem">Home</Link>
+                    <ScrollLink activeClass='active' to='intro' spy={true} smooth={true} offset={-60} duration={500} className="desktopMenuListItem">Home</ScrollLink>
                     </li>
                     <li>
-                    <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-40} duration={500} className="desktopMenuListItem">About Me</Link>
+                    <ScrollLink activeClass='active' to='skills' spy={true} smooth={true} offset={-40} duration={500} className="desktopMenuListItem">About Me</ScrollLink>
                     </li>
                     <li>
-                    <Link activeClass='active' to='' spy={true} smooth={true} offset={-40} duration={500} className="desktopMenuListItem">Services</Link>
+                        <Link to="/publications" className="desktopMenuListItem">Publications</Link>
                     </li>
                     <li>
-                    <Link activeClass='active' to='' spy={true} smooth={true} offset={-40} duration={500} className="desktopMenuListItem">Experience</Link>      
+                        <Link to="/experience" className="desktopMenuListItem">Experience</Link>
                     </li>
                     <li>
                         <span>Servicios ▼</span>
                         <ul>
                             <li>
-                            <Link activeClass='active' to='works' spy={true} smooth={true} offset={-60} duration={500} className="desktopMenuListItem">Portfolio</Link>
+                            <ScrollLink activeClass='active' to='works' spy={true} smooth={true} offset={-60} duration={500} className="desktopMenuListItem">Portfolio</ScrollLink>
                             </li>
                             <li>
-                            <Link activeClass='active' to='clients' spy={true} smooth={true} offset={-40} duration={500} className="desktopMenuListItem">Clients</Link>
+                            <ScrollLink activeClass='active' to='clients' spy={true} smooth={true} offset={-40} duration={500} className="desktopMenuListItem">Clients</ScrollLink>
                             </li>
                         </ul>
                     </li>
@@ -77,11 +80,11 @@ const Navbar = () => {
             {/* Menu para mobiles */}
             <img src={menu} alt="Menu" className="mobMenu" onClick={()=>setShowMenu(!showMenu)}/>
             <div className="navMenu" style={{display: showMenu? 'flex':'none'}}>
-                <Link activeClass="active" to="intro" spy={true} smooth={true} offset={-100} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Home</Link>
-                <Link activeClass="active" to="skills" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>About</Link>
-                <Link activeClass="active" to="works" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Portfolio</Link>
-                <Link activeClass="active" to="clients" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Clients</Link>
-                <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Contact</Link>
+                <ScrollLink activeClass="active" to="intro" spy={true} smooth={true} offset={-100} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Home</ScrollLink>
+                <ScrollLink activeClass="active" to="skills" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>About</ScrollLink>
+                <ScrollLink activeClass="active" to="works" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Portfolio</ScrollLink>
+                <ScrollLink activeClass="active" to="clients" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Clients</ScrollLink>
+                <ScrollLink activeClass="active" to="contact" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Contact</ScrollLink>
             </div>
 
 

@@ -1,10 +1,10 @@
 
+import React from 'react';
 import Navbar from './components/NavBar/navbar';
-import Intro from './components/Intro/intro';
-import Skills from './components/Skills/skills';
-import Works from './components/Works/works';
-import Contact from './components/Contact/contact';
-import Footer from './components/Footer/footer';
+import Home from './home';
+import Publications from './components/Publications/publications';
+import Experience from './components/Experience/experience';
+import { Routes, Route } from 'react-router-dom';
 
 
 function App() {
@@ -12,11 +12,12 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Intro />
-      <Skills />
-      <Works />
-      <Contact />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/publications" element={<Publications />} />
+        <Route path="/experience" element={<Experience />} />
+      </Routes>
+
     </div>
   );
 }
