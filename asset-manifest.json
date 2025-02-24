@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f1fb2b88.css",
-    "main.js": "/static/js/main.97ac614e.js",
+    "main.js": "/static/js/main.3fd8b7de.js",
     "static/media/profil-gerar-photo-v4.png": "/static/media/profil-gerar-photo-v4.4f63048562bf936d7194.png",
     "static/media/portfolio-6.png": "/static/media/portfolio-6.4a10fac7d271e87859e9.png",
     "static/media/portfolio-2.png": "/static/media/portfolio-2.33d06b368b4e6395030e.png",
@@ -18,10 +18,10 @@
     "static/media/logo-g.PNG": "/static/media/logo-g.34af981941ff37851f68.PNG",
     "index.html": "/index.html",
     "main.f1fb2b88.css.map": "/static/css/main.f1fb2b88.css.map",
-    "main.97ac614e.js.map": "/static/js/main.97ac614e.js.map"
+    "main.3fd8b7de.js.map": "/static/js/main.3fd8b7de.js.map"
   },
   "entrypoints": [
     "static/css/main.f1fb2b88.css",
-    "static/js/main.97ac614e.js"
+    "static/js/main.3fd8b7de.js"
   ]
 }
