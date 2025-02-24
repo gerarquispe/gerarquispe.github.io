@@ -53,10 +53,10 @@ const Navbar = () => {
                     <Link to="/publications" className="desktopMenuListItem">Publications</Link>
                 </li>
                 <li>
-                    <Link to="/experience" className="desktopMenuListItem">Experience</Link>
+                    <Link to="/experience" className="desktopMenuListItem">Servicios</Link>
                 </li>
                 <li>
-                    <span>Servicios ▼</span>
+                    <span>Experience ▼</span>
                     <ul>
                         <li>
                             <ScrollLink activeClass='active' to='works' spy={true} smooth={true} offset={-60} duration={500} className="desktopMenuListItem">Portfolio</ScrollLink>
@@ -83,10 +83,10 @@ const Navbar = () => {
                     <Link to="/publications" className="desktopMenuListItem">Publications</Link>
                 </li>
                 <li>
-                    <Link to="/experience" className="desktopMenuListItem">Experience</Link>
+                    <Link to="/experience" className="desktopMenuListItem">Servicios</Link>
                 </li>
                 <li>
-                    <span>Servicios ▼</span>
+                    <span>Experience ▼</span>
                     <ul>
                         <li>
                             <ScrollLink className="desktopMenuListItem" onClick={() => goToPageAndScroll("works","/")}>Portfolio</ScrollLink>
