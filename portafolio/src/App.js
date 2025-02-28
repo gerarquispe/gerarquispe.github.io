@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Navbar from './components/NavBar/navbar';
+import Footer from './components/Footer/footer';
 import Home from './home';
 import Publications from './components/Publications/publications';
 import Experience from './components/Experience/experience';
@@ -17,6 +18,8 @@ function App() {
         <Route path="/publications" element={<Publications />} />
         <Route path="/experience" element={<Experience />} />
       </Routes>
+      
+      <Footer />
 
     </div>
   );
