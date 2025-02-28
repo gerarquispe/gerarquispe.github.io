@@ -1,8 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.f1fb2b88.css",
-    "main.js": "/static/js/main.3fd8b7de.js",
+    "main.css": "/static/css/main.4c358834.css",
+    "main.js": "/static/js/main.277fa226.js",
+    "static/media/TSenseDetection.png": "/static/media/TSenseDetection.29c1f5bd6a3d80a057ab.png",
     "static/media/profil-gerar-photo-v4.png": "/static/media/profil-gerar-photo-v4.4f63048562bf936d7194.png",
+    "static/media/g5702.png": "/static/media/g5702.d9b9ab28c6d1c84c3353.png",
+    "static/media/anomalousITS12.png": "/static/media/anomalousITS12.36b24bf7d6ef6b76c102.png",
     "static/media/portfolio-6.png": "/static/media/portfolio-6.4a10fac7d271e87859e9.png",
     "static/media/portfolio-2.png": "/static/media/portfolio-2.33d06b368b4e6395030e.png",
     "static/media/portfolio-4.png": "/static/media/portfolio-4.8e8bac5e33dc3f211e2b.png",
@@ -10,6 +13,8 @@
     "static/media/portfolio-1.png": "/static/media/portfolio-1.b33adf772d54ab33e953.png",
     "static/media/portfolio-5.png": "/static/media/portfolio-5.bf754db8618dd60ec6f1.png",
     "static/media/portfolio-3.png": "/static/media/portfolio-3.ca4192894d93b08ad3b5.png",
+    "static/media/imagresumen.png": "/static/media/imagresumen.47bf752a4264ec722a47.png",
+    "static/media/compare_fourier_wavelet_v2.png": "/static/media/compare_fourier_wavelet_v2.b0c1741531b2454886a3.png",
     "static/media/facebook.png": "/static/media/facebook.81dd033a37c4860f7121.png",
     "static/media/adobe.png": "/static/media/adobe.a08b8360ff7b700ed0c4.png",
     "static/media/walmart.png": "/static/media/walmart.1d2b5e5c5c5a8e2bd5ce.png",
@@ -17,11 +22,11 @@
     "static/media/instagram.png": "/static/media/instagram.0bcd1dcb7d853c327af7.png",
     "static/media/logo-g.PNG": "/static/media/logo-g.34af981941ff37851f68.PNG",
     "index.html": "/index.html",
-    "main.f1fb2b88.css.map": "/static/css/main.f1fb2b88.css.map",
-    "main.3fd8b7de.js.map": "/static/js/main.3fd8b7de.js.map"
+    "main.4c358834.css.map": "/static/css/main.4c358834.css.map",
+    "main.277fa226.js.map": "/static/js/main.277fa226.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1fb2b88.css",
-    "static/js/main.3fd8b7de.js"
+    "static/css/main.4c358834.css",
+    "static/js/main.277fa226.js"
   ]
 }
