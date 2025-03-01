@@ -20,8 +20,8 @@ const Publications = () => {
           <p>Trabalho de Conclusão de Curso - MBA em Inteligência Artificial e Big Data.</p>
           <a className='publication-content' 
             target="_blank" rel="noopener noreferrer"
-            href='https://bdta.abcd.usp.br/directbitstream/802c10bb-086b-4c02-a30f-96b51dea9c02/Gerar_Francias_Quispe_Torres.pdf'>
-              <p>TCC</p>
+            href='https://bdta.abcd.usp.br/item/003224631'>
+              <p>Trabalho de conclusao de curso - TCC</p>
           </a>
         </div>
         <div className='publication-img'>

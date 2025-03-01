@@ -53,7 +53,7 @@ const Navbar = () => {
                     <Link to="/publications" className="desktopMenuListItem">Publications</Link>
                 </li>
                 <li>
-                    <Link to="/experience" className="desktopMenuListItem">Servicios</Link>
+                    <Link to="/experience" className="desktopMenuListItem">Services</Link>
                 </li>
                 <li>
                     <span>Experience ▼</span>
