@@ -21,13 +21,6 @@
     margin: 1rem 0rem;
 }
 
-.publications > h2{
-    /* background-color: red; */
-    color: #00ADB5;
-    text-align: right;
-    
-}
-
 .publication {
     display: flex;
     flex-wrap: wrap;
@@ -36,6 +29,14 @@
     margin: 1.5rem 0rem 3rem;
     /* background-color: blue;     */
 }
+
+.publications > h2{
+    /* background-color: red; */
+    color: #00ADB5;
+    text-align: right;
+    
+}
+
 
 .publication-img {
     display: flex;
