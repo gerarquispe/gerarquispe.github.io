@@ -19,7 +19,7 @@
 .worksDesc {
     font-weight: 300;
     font-size: 1rem;
-    max-width: 45rem;
+    max-width: 50rem;
 }
 
 .worksImgs {
@@ -28,12 +28,33 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100vw;
-    max-width: 65rem;
+    max-width: 50rem;
 }
 
+.box-project {
+    max-width: 30rem;
+    width: 49%;
+    margin: 2.5% 0.5%;
+}
+
+.box-project p {
+    max-width: 100%;
+}
+
+.box-project a {
+
+    color:#00ADB5;
+
+}
+
+.box-project a:hover {
+
+    color:white;
+
+}
 .worksImg {
     object-fit: cover;
-    height: 20rem;
+    height: 28rem;
     margin: 0.5rem;
 }
 
@@ -54,8 +75,15 @@
     background: red;
 }
 
-@media screen and (max-width: 585px) {
+@media screen and (max-width: 780px) {
+    .box-project {
+        width: 99%;
+        margin: 2.5% 0.5%;
+    }
     .worksImg {
-        height: 48vw;
+        height: 80vw;
+    }
+    .worksImgs {
+        max-width: 99%;
     }
 }
