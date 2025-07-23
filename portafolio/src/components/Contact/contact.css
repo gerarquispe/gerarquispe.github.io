@@ -90,6 +90,30 @@
     margin: 0 1.7rem;
 }
 
+.links-icon {
+    display: flex;
+    gap: 11rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.link-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  color: #EEEEEE; 
+  transition: color 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a:hover .link-icon {
+  color: #00ADB5;
+  transform: scale(1.15);
+}
+
+
 @media screen and (max-width: 480px) {
     .link {
         margin: 0 0rem;
