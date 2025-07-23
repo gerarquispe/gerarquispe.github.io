@@ -9,7 +9,7 @@ import Portfolio6 from '../../assets/resumen-videos-vigilancia.png';
 export const works = () => {
   return (
     <section id="works">
-        <h2 className="worksTitle">My Projects</h2>
+        <h2 className="worksTitle">Some Projects</h2>
         <span className="worksDesc">My experience spans a wide range of projects, from web development with WordPress to implementing advanced solutions in computer vision, augmented reality, and data science. I've worked on trout weight estimation using computer vision, camera calibration for augmented reality, credit risk prediction using data science, anomalous trajectory detection in intelligent transport systems, and summary extraction from surveillance videos. Each project has been an opportunity to apply and expand my knowledge in technology and innovation.</span>
         <div className="worksImgs">
           <div className='box-project'>
