@@ -17,57 +17,11 @@
 .parallax-container {
   width: 100%;
   border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
   margin-top: 2rem;
 }
 
-.parallax-bg {
-  min-height: 20rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  background:   /* Este es el background de la div dentro para los videos parte de arriba*/
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.16), transparent 35%),
-    linear-gradient(135deg, rgba(255, 88, 88, 0.35), rgba(20, 34, 82, 0.82));
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.parallax-overlay {
-  max-width: 32rem;
-  padding: 1.75rem 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 1rem;
-  background: rgba(10, 10, 10, 0.6);
-  backdrop-filter: blur(6px);
-  color: #fff;
-}
-
-.parallax-overlay h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.4rem;
-}
-
-.parallax-overlay p {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.content-section {
-  padding: 2rem 1.25rem 2.25rem;
-  background: linear-gradient(180deg, #171717 0%, #111 100%);  /* Este es el background de la div dentro para los videos parte de abajo*/
-  
-}
-
 .presentationIntro,
-.parallax-container,
-.content-section {
+.parallax-container {
   max-width: 65rem;
   margin: 0 auto;
 }
@@ -84,6 +38,21 @@
   border-radius: 0.75rem;
   overflow: hidden;
   background: rgb(50, 50, 50);
+  margin: 1.5rem 0rem;
+}
+
+.presentationCard > h2 {
+    color: #00ADB5;
+    text-align: right;
+    margin: 0.5rem 0.4rem 0rem;
+}
+
+.presentationCard hr {
+  border: 0;
+  height: 2px;
+  background: #ffffff;
+  margin: 0.25rem 0.4rem 0.75rem;
+  border-radius: 999px;
 }
 
 .presentationVideo {
@@ -128,27 +97,7 @@
     padding: 0 1rem 3rem;
   }
 
-  .parallax-bg {
-    min-height: 16rem;
-    background-attachment: scroll;
-    padding: 1.25rem;
-  }
-
-  .parallax-overlay {
-    padding: 1.25rem 1.5rem;
-  }
-
   .presentationCardContent p {
-    font-size: 0.9rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .parallax-overlay h3 {
-    font-size: 1.1rem;
-  }
-
-  .parallax-overlay p {
     font-size: 0.9rem;
   }
 }
