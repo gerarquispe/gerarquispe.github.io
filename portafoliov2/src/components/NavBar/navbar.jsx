@@ -109,9 +109,7 @@ const Navbar = () => {
 
             <div className="desktopMenu">
                 {location === "" ? navbarHome() : navbarNoHome()}
-            </div>
-
-            <div >
+            </div>            <div className="socialIcons">
                 <a href="https://github.com/fryzito" target="_blank" rel="noopener noreferrer">
                     <GitHubIcon fontSize="large" sx={{ color: "black", "&:hover": { color: "white" } }} />
                 </a>
@@ -151,11 +149,27 @@ const Navbar = () => {
             {/* Menu para mobiles */}
             <img src={menu} alt="Menu" className="mobMenu" onClick={()=>setShowMenu(!showMenu)}/>
             <div className="navMenu" style={{display: showMenu? 'flex':'none'}}>
-                <ScrollLink activeClass="active" to="intro" spy={true} smooth={true} offset={-100} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Home</ScrollLink>
-                <ScrollLink activeClass="active" to="skills" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>About</ScrollLink>
-                <ScrollLink activeClass="active" to="works" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Portfolio</ScrollLink>
-                <ScrollLink activeClass="active" to="clients" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Clients</ScrollLink>
-                <ScrollLink activeClass="active" to="contact" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Contact</ScrollLink>
+                {location === "" ? (
+                    <>
+                        <ScrollLink activeClass="active" to="intro" spy={true} smooth={true} offset={-100} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Home</ScrollLink>
+                        <ScrollLink activeClass="active" to="skills" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>About Me</ScrollLink>
+                        <Link to="/publications" className="listItem" onClick={()=>setShowMenu(false)}>Publications</Link>
+                        <Link to="/experience" className="listItem" onClick={()=>setShowMenu(false)}>Services</Link>
+                        <ScrollLink activeClass="active" to="works" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Portfolio</ScrollLink>
+                        <ScrollLink activeClass="active" to="clients" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Clients</ScrollLink>
+                        <ScrollLink activeClass="active" to="contact" spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Contact</ScrollLink>
+                    </>
+                ) : (
+                    <>
+                        <span className="listItem" onClick={()=>{ setShowMenu(false); goToPageAndScroll("intro","/"); }}>Home</span>
+                        <span className="listItem" onClick={()=>{ setShowMenu(false); goToPageAndScroll("skills","/"); }}>About Me</span>
+                        <Link to="/publications" className="listItem" onClick={()=>setShowMenu(false)}>Publications</Link>
+                        <Link to="/experience" className="listItem" onClick={()=>setShowMenu(false)}>Services</Link>
+                        <span className="listItem" onClick={()=>{ setShowMenu(false); goToPageAndScroll("works","/"); }}>Portfolio</span>
+                        <span className="listItem" onClick={()=>{ setShowMenu(false); goToPageAndScroll("clients","/"); }}>Clients</span>
+                        <span className="listItem" onClick={()=>{ setShowMenu(false); goToPageAndScroll("contact","/"); }}>Contact</span>
+                    </>
+                )}
             </div>
 
         </nav>
