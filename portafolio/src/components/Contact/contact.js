@@ -35,7 +35,8 @@ const Contact = () => {
 
   return (
     <section id="contactPage">
-        <div id="clients">
+
+        {/* <div id="clients">
             <h1 className="contactPageTitle">My Clients</h1>
             <p className="clientsDesc">
                 I have had the opportunity to work with a diverse group of companies.
@@ -47,7 +48,7 @@ const Contact = () => {
                 <img src={Microsoft} alt="" className="clientImg" />
                 <img src={Facebook} alt="" className="clientImg" />
             </div>
-        </div>
+        </div> */}
 
         <div id="contact">
             <h1 className="contactPageTitle">Contact Me</h1>
