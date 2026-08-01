@@ -81,21 +81,28 @@
 .links {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem 1.7rem;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .link {
     object-fit: cover;
-    /* height: 3rem; */
     width: 4rem;
-    margin: 0 1.7rem;
+    height: auto;
+    margin: 0;
 }
 
 .links-icon {
     display: flex;
-    gap: 11rem;
+    gap: 2rem 4rem;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 2rem;
+    align-items: center;
+    margin: 2rem auto;
+    width: 100%;
 }
 
 .link-icon {
@@ -115,7 +122,17 @@ a:hover .link-icon {
 
 
 @media screen and (max-width: 480px) {
+    .links {
+        gap: 0.75rem 1rem;
+    }
+
     .link {
-        margin: 0 0rem;
+        width: 3.25rem;
+        margin: 0;
+    }
+
+    .links-icon {
+        gap: 1.5rem;
+        margin: 1.5rem auto;
     }
 }
