@@ -19,43 +19,43 @@ import Portfolio6 from '../../assets/resumen-videos-vigilancia.png';
 const projects = [
   {
     id: 1,
-    title: 'Desarrollo Web & Marketing',
-    desc: 'Creación y optimización de sitios web funcionales en WordPress para marketing digital.',
+    title: 'Web Development with WordPress and Digital Marketing',
+    desc: 'Created and optimized functional websites for digital marketing, maximizing reach',
     img: Portfolio1,
     link: 'https://lizmarinpnl.com/'
   },
   {
     id: 2,
-    title: 'Estimación de Peso en Truchas',
-    desc: 'Sistema de visión por computadora usando Deep Learning y OpenCV.',
+    title: 'Trout Weight Estimation via Computer Vision',
+    desc: 'Implemented a computer vision system for trout weight estimation, utilizing Deep Learning techniques and the OpenCV library',
     img: Portfolio2,
     link: 'https://youtu.be/PsYIA7CkJCM'
   },
   {
     id: 3,
-    title: 'Realidad Aumentada & Calibración',
-    desc: 'Aplicación AR con calibración precisa de cámara usando C++ y OpenGL.',
+    title: 'Augmented Reality and Camera Calibration',
+    desc: 'Developed augmented reality applications with precise camera calibration, employing OpenGL, image segmentation, and C++ programming',
     img: Portfolio3,
     link: 'https://bitbucket.org/marbramen/cg_augrea/src/master/'
   },
   {
     id: 4,
-    title: 'Predicción de Riesgo Crediticio',
-    desc: 'Modelo Machine Learning End-to-End para evaluación de riesgo.',
+    title: 'Credit Risk Prediction (Data Science)',
+    desc: 'Built an end-to-end Machine Learning model for credit risk prediction, covering data ingestion, model evaluation, and production deployment',
     img: Portfolio4,
     link: null
   },
   {
     id: 5,
-    title: 'Detección de Trayectorias Anómalas',
-    desc: 'Identificación de anomalías en sistemas de transporte inteligentes.',
+    title: 'Anomalous Trajectory Detection in Intelligent Transport',
+    desc: 'Designed and implemented an application to identify anomalous trajectories in intelligent transport systems, managing and analyzing large volumes of data',
     img: Portfolio5,
     link: 'https://repositorio.unsaac.edu.pe/bitstream/handle/20.500.12918/7434/253T20220603_TC.pdf?sequence=1&isAllowed=y'
   },
   {
     id: 6,
-    title: 'Resumen de Videos de Vigilancia',
-    desc: 'Generación automática de resúmenes usando aprendizaje no supervisado.',
+    title: 'Surveillance Video Summary Extraction',
+    desc: 'Developed a solution for the automatic generation of surveillance video summaries, applying unsupervised learning techniques and semantic information extraction',
     img: Portfolio6,
     link: 'https://repositorio.ucsp.edu.pe/item/0d31bbc1-d548-42b2-b743-4eb5ef4e9c26'
   }
@@ -76,7 +76,6 @@ export const Works = () => {
           modules={[Autoplay, Pagination, Navigation]}
           dir="rtl"
           initialSlide={finalSlide}
-          spaceBetween={25}
           slidesPerView={1}
           loop={true}
           autoplay={{
@@ -95,13 +94,19 @@ export const Works = () => {
           {projects.map((project) => (
             <SwiperSlide key={project.id}>
               <div className="box-project">
-                <img src={project.img} alt={project.title} className="worksImg" />
+                {project.link ? (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="projectImageLink">
+                    <img src={project.img} alt={project.title} className="worksImg" />
+                  </a>
+                ) : (
+                  <img src={project.img} alt={project.title} className="worksImg" />
+                )}
                 <div className="project-overlay">
                   <h3>{project.title}</h3>
                   <p>{project.desc}</p>
                   {project.link && (
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="projectLink">
-                      Ver Proyecto →
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="projectLinkBtn">
+                      Ver Proyecto
                     </a>
                   )}
                 </div>
@@ -112,7 +117,6 @@ export const Works = () => {
 
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
-          spaceBetween={25}
           slidesPerView={1}
           loop={true}
           autoplay={{
@@ -131,13 +135,19 @@ export const Works = () => {
           {projects.map((project) => (
             <SwiperSlide key={project.id}>
               <div className="box-project">
-                <img src={project.img} alt={project.title} className="worksImg" />
+                {project.link ? (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="projectImageLink">
+                    <img src={project.img} alt={project.title} className="worksImg" />
+                  </a>
+                ) : (
+                  <img src={project.img} alt={project.title} className="worksImg" />
+                )}
                 <div className="project-overlay">
                   <h3>{project.title}</h3>
                   <p>{project.desc}</p>
                   {project.link && (
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="projectLink">
-                      Ver Proyecto →
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="projectLinkBtn">
+                      Ver Proyecto
                     </a>
                   )}
                 </div>
