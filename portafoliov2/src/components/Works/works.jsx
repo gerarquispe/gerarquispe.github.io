@@ -15,6 +15,8 @@ import Portfolio3 from '../../assets/calibracion-realidad-aumentada.png';
 import Portfolio4 from '../../assets/lending-risk-prediction.png';
 import Portfolio5 from '../../assets/traffic-analysis.png';
 import Portfolio6 from '../../assets/resumen-videos-vigilancia.png';
+import Portfolio7 from '../../assets/mercado-juliaca.png';
+import Portfolio8 from '../../assets/GERESA.png';
 
 const projects = [
   {
@@ -58,7 +60,22 @@ const projects = [
     desc: 'Developed a solution for the automatic generation of surveillance video summaries, applying unsupervised learning techniques and semantic information extraction',
     img: Portfolio6,
     link: 'https://repositorio.ucsp.edu.pe/item/0d31bbc1-d548-42b2-b743-4eb5ef4e9c26'
+  },
+  {
+    id: 7,
+    title: 'E-Commerce Platform Development (Django & React)',
+    desc: 'Full-stack development of an e-commerce platform using Django for backend services and React for an interactive frontend user experience',
+    img: Portfolio7,
+    link: null
+  },
+  {
+    id: 8,
+    title: 'Maternal Health Statistical Indicators',
+    desc: 'Generation of PowerBI dashboards, integrating data sources such as SIS and MINSA. Data Analytics work',
+    img: Portfolio8,
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiYjQyYzA5YTUtOTU5MS00YmUxLTgwMTEtM2ZhMGM2OTI2ZDkwIiwidCI6ImExMTQxY2VhLWY2NjYtNGUxMS1hNzAzLWQ3MjEzNDBkNjQ0NCIsImMiOjR9'
   }
+
 ];
 
 const finalSlide = projects.length - 1;
